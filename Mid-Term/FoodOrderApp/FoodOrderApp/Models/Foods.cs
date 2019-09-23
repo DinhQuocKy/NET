@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace FoodOrderApp.Models
@@ -14,7 +15,7 @@ namespace FoodOrderApp.Models
         public string FoodName { get; set; }
         public int FoodPrice { get; set; }
         public string FoodImage { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<OrderDetails> OrderDetails { get; set; }
     }
 }
